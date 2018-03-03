@@ -1,7 +1,12 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
+
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import status
 
 from .models import WizzerUser, Whiz
 from .forms import WhizForm
+from .serializers import WizzerUserSerializer, WhizSerializer
 
 
 def index(request):
@@ -20,3 +25,24 @@ def index(request):
     context = {'WizzerUser': user, 'Whizzes': whizzes, 'WhizForm': form}
     return render(request, 'SocialMedia/WizzerFeed.html', context)
 
+#API VIEWS
+class WizzerUserList(APIView):
+
+    def get(self, request):
+        wizzerusersall = WizzerUser.objects.all()
+        serializer = WizzerUserSerializer(wizzerusersall, many=True)
+        return Response(serializer.data)
+
+    def post(self, request):
+        pass
+
+
+class WhizList(APIView):
+
+    def get(self, request):
+        whizzes = Whiz.objects.all()
+        serializer = WhizSerializer(whizzes, many=True)
+        return Response(serializer.data)
+
+    def post(self, request):
+        pass

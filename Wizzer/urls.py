@@ -16,7 +16,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from rest_framework.urlpatterns import format_suffix_patterns
+
+from SocialMedia import views as SocialMediaViews
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('SocialMedia.urls'))
+    path('', include('SocialMedia.urls')),
+    path('API/WizzerUserList/', SocialMediaViews.WizzerUserList.as_view()),
+    path('API/WhizList/', SocialMediaViews.WhizList.as_view())
 ]
+
+#temporary
+urlpatterns = format_suffix_patterns(urlpatterns)
