@@ -13,8 +13,8 @@ def index(request):
             new_whiz = Whiz(whiz_poster=WizzerUser.objects.all()[0], content=request.POST['whiz_input'])
             new_whiz.save()
             return redirect('index')
-        else:
-            form = WhizForm()
+    else:
+        form = WhizForm()
 
     user = WizzerUser.objects.all()[0]
     whizzes = Whiz.objects.all()[::-1]
