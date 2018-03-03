@@ -1,0 +1,35 @@
+{% extends "SocialMedia/main.html" %}
+{% load static %}
+
+{% block main %}
+<div class="post-form">
+    <form method="POST" action="{% url 'index' %}">
+        {{ WhizForm }}
+        <input id="submit" type="submit" value="Submit">
+        {% csrf_token %}
+    </form>
+</div>
+<div class="post-container">
+{% for whiz in Whizzes %}
+<div class="post">
+    <div class="top-bar">
+        <a href="#"><img id="profile-photo" src="{% static 'SocialMedia/images/IMG_0757.JPG' %}"/></a>
+        <h1>{{ whiz.whiz_poster.first_name }} {{ whiz.whiz_poster.second_name }}</h1>
+        <form method="POST" action="{% url 'index' %}">
+            <button type="submit" value="{{ whiz.id }}">Delete</button>
+            {% csrf_token %}
+        </form>
+    </div>
+    <div class="post-content">
+        <h1>{{ whiz.content }}</h1>
+    </div>
+    <div class="post-footer">
+        <button type="button">Write Reply</button>
+        <button type="button">Like</button>
+        <button type="button">Dislike</button>
+        <button type="button">Report</button>
+    </div>
+</div>
+{% endfor %}
+</div>
+{% endblock %}
