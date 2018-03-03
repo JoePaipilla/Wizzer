@@ -7,7 +7,6 @@ from .forms import WhizForm
 def index(request):
 
     if request.method == "POST":
-        print(request.POST)
         form = WhizForm(request.POST)
         if form.is_valid():
             new_whiz = Whiz(whiz_poster=WizzerUser.objects.all()[0], content=request.POST['whiz_input'])

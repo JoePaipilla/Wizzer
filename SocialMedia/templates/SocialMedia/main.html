@@ -14,14 +14,14 @@
 		<div class="navbar">
             {% block navbar %}
 			<div class="logo">
-				<h1>whiz</h1>
+				<h1>wizzer</h1>
 			</div>
 			<div class="description">
 				<a href="#"><img id="profile-photo" src="{% static 'SocialMedia/images/IMG_0757.JPG' %}"/></a>
 				<h1>{{ WizzerUser.first_name }} {{ WizzerUser.second_name }}</h1>
 				<div class="follow-count">
-					<h1>Following: 210</h1>
-					<h1>Followers: 6783</h1>
+					<h1>Following: {{ WizzerUser.following }}</h1>
+					<h1>Followers: {{ WizzerUser.followers }}</h1>
 				</div>
 			</div>
 				<button type="button">Home</button>
