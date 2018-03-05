@@ -1,17 +1,22 @@
 {% extends "SocialMedia/main.html" %}
 {% load static %}
+{% block css %}<link rel='stylesheet' type='text/css' href="{% static 'SocialMedia/mainDiv.css' %}"/>{% endblock %}
 
-{% block main %}
-<div class="post-form">
-    <form method="POST" action="{% url 'index' %}">
-        {{ WhizForm }}
-        <input id="submit" type="submit" value="Submit">
-        {% csrf_token %}
-    </form>
-</div>
-<div class="post-container">
-{% for whiz in Whizzes %}
-{% include 'SocialMedia/includes/post.html' %}
-{% endfor %}
-</div>
+{% block body %}
+    {% include 'SocialMedia/components/navbar.html' %}
+
+    <div class="main">
+        <div class="post-form">
+            <form method="POST" action="{% url 'index' %}">
+                {{ WhizForm }}
+                <input id="submit" type="submit" value="Submit">
+                {% csrf_token %}
+            </form>
+        </div>
+        <div class="post-container">
+            {% for whiz in Whizzes %}
+                {% include 'SocialMedia/components/post.html' %}
+            {% endfor %}
+        </div>
+    </div>
 {% endblock %}

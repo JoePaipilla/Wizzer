@@ -1,0 +1,101 @@
+@import "main.css";
+
+.main {
+	width: 100%;
+	margin-left: 20%;
+	font-size: .7em;
+	overflow-y: auto;
+	padding: 10px 20px 10px 20px;
+}
+
+.main * {
+	color: black;
+	/**/
+}
+
+.main .post-form form {
+	margin-bottom: 10px;
+}
+
+.main .post-form form #message {
+	height: 4.5em/*1.5*/;
+	width: 100%;
+}
+
+/*.main .post-form form #message:focus {
+	height: 4.5em;
+	-moz-transition: .15s ease;
+}*/
+
+.main .post-form form #submit {
+	background-color: purple;
+	color: white;
+	border: 0;
+	width: 100%;
+}
+
+.main .post-form form #submit:hover {
+	cursor: pointer;
+}
+
+.main .post-form form #submit:active{
+	background-color: red;
+}
+
+.main .post-container {
+	/*height: 100%;*/
+	display: flex;
+	flex-direction: column;
+}
+
+.main .post-container .post {
+	display: flex;
+	flex-direction: column;
+	/*border-radius: 5px;*/
+	background-color: white;
+	margin: 0px 0 0px 0;
+	border-top: 1px solid #dfdfdf;
+}
+
+.main .post-container .post .top-bar {
+	display: flex;
+	flex-direction: row;
+	border-bottom: 1px solid #dfdfdf;
+	padding: 10px;
+	align-items: center;
+
+}
+
+.main .post-container .post .top-bar #profile-photo{
+	object-fit: cover;
+	height: 75px;
+	width: 75px;
+	padding-right: 10px;
+}
+
+.main .post-container .post .top-bar h1{
+}
+
+.main .post-container .post .post-content {
+	padding: 10px;
+}
+
+.main .post-container .post .post-footer {
+	display: flex;
+	justify-content: space-around;
+	border-top: 1px solid #dfdfdf;
+}
+
+.main .post-container .post .post-footer *{
+	background-color: white;
+	color: #a5a5a5;
+	font-size: 1.5em;
+	padding: 1px 0 1px 0;
+	width: 100%;
+	text-align: center;
+}
+
+.main .post-container .post .post-footer > *:hover{
+	background-color: purple;
+	-moz-transition: .15s ease;
+}
