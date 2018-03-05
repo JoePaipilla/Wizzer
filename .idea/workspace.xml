@@ -2,29 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0851abcf-ed13-49e4-aa83-25e2683d2564" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/UserLogin/__init__.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/UserLogin/admin.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/UserLogin/apps.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/UserLogin/migrations/__init__.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/UserLogin/models.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/UserLogin/static/UserLogin/login.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/UserLogin/templates/registration/login.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/UserLogin/tests.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/UserLogin/urls.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/UserLogin/views.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/SocialMedia/static/SocialMedia/login.css" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/SocialMedia/static/SocialMedia/login.css" afterPath="$PROJECT_DIR$/SocialMedia/static/SocialMedia/login.css" />
-      <change beforePath="$PROJECT_DIR$/SocialMedia/static/SocialMedia/main.css" afterPath="$PROJECT_DIR$/static/main.css" />
-      <change beforePath="$PROJECT_DIR$/SocialMedia/static/SocialMedia/main.js" afterPath="$PROJECT_DIR$/static/main.js" />
-      <change beforePath="$PROJECT_DIR$/SocialMedia/static/SocialMedia/mainDiv.css" afterPath="$PROJECT_DIR$/SocialMedia/static/SocialMedia/mainDiv.css" />
-      <change beforePath="$PROJECT_DIR$/SocialMedia/static/SocialMedia/navbar.css" afterPath="$PROJECT_DIR$/SocialMedia/static/SocialMedia/navbar.css" />
-      <change beforePath="$PROJECT_DIR$/SocialMedia/templates/SocialMedia/WizzerFeed.html" afterPath="$PROJECT_DIR$/SocialMedia/templates/SocialMedia/WizzerFeed.html" />
-      <change beforePath="$PROJECT_DIR$/SocialMedia/templates/SocialMedia/login.html" afterPath="$PROJECT_DIR$/UserLogin/templates/registration/login.html" />
-      <change beforePath="$PROJECT_DIR$/SocialMedia/templates/SocialMedia/main.html" afterPath="$PROJECT_DIR$/templates/main.html" />
+      <change beforePath="$PROJECT_DIR$/SocialMedia/templates/SocialMedia/loginpage.html" afterPath="$PROJECT_DIR$/SocialMedia/templates/SocialMedia/login.html" />
       <change beforePath="$PROJECT_DIR$/SocialMedia/urls.py" afterPath="$PROJECT_DIR$/SocialMedia/urls.py" />
       <change beforePath="$PROJECT_DIR$/SocialMedia/views.py" afterPath="$PROJECT_DIR$/SocialMedia/views.py" />
-      <change beforePath="$PROJECT_DIR$/Wizzer/settings.py" afterPath="$PROJECT_DIR$/Wizzer/settings.py" />
-      <change beforePath="$PROJECT_DIR$/Wizzer/urls.py" afterPath="$PROJECT_DIR$/Wizzer/urls.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -50,14 +32,82 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SocialMedia/templates/SocialMedia/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="53" lean-forward="false" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SocialMedia/static/SocialMedia/login.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="35" lean-forward="false" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mainDiv.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SocialMedia/static/SocialMedia/mainDiv.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SocialMedia/static/SocialMedia/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="3" lean-forward="true" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="navbar.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SocialMedia/static/SocialMedia/navbar.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="59" column="14" lean-forward="false" selection-start-line="59" selection-start-column="14" selection-end-line="59" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SocialMedia/templates/SocialMedia/main.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="18" lean-forward="false" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WizzerFeed.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SocialMedia/templates/SocialMedia/WizzerFeed.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="90" lean-forward="false" selection-start-line="2" selection-start-column="90" selection-end-line="2" selection-end-column="90" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SocialMedia/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="40" lean-forward="false" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -65,18 +115,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SocialMedia/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="25" column="66" lean-forward="false" selection-start-line="25" selection-start-column="66" selection-end-line="25" selection-end-column="66" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WizzerFeed.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/SocialMedia/templates/SocialMedia/WizzerFeed.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="12" lean-forward="false" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
+            <state relative-caret-position="179">
+              <caret line="31" column="10" lean-forward="false" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -87,8 +127,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -103,8 +143,11 @@
         <option value="$PROJECT_DIR$/SocialMedia/templates/SocialMedia/wizzerfeed.html" />
         <option value="$PROJECT_DIR$/SocialMedia/admin.py" />
         <option value="$PROJECT_DIR$/SocialMedia/templates/SocialMedia/post.html" />
+        <option value="$PROJECT_DIR$/SocialMedia/forms.py" />
         <option value="$PROJECT_DIR$/SocialMedia/models.py" />
+        <option value="$PROJECT_DIR$/Wizzer/settings.py" />
         <option value="$PROJECT_DIR$/SocialMedia/serializers.py" />
+        <option value="$PROJECT_DIR$/Wizzer/urls.py" />
         <option value="$PROJECT_DIR$/SocialMedia/templates/SocialMedia/includes/post.html" />
         <option value="$PROJECT_DIR$/SocialMedia/templates/SocialMedia/includes/navbar.html" />
         <option value="$PROJECT_DIR$/SocialMedia/templates/SocialMedia/main.html" />
@@ -112,18 +155,12 @@
         <option value="$PROJECT_DIR$/SocialMedia/static/SocialMedia/navbar.css" />
         <option value="$PROJECT_DIR$/SocialMedia/static/SocialMedia/mainDiv.css" />
         <option value="$PROJECT_DIR$/SocialMedia/static/SocialMedia/main.css" />
+        <option value="$PROJECT_DIR$/SocialMedia/templates/SocialMedia/WizzerFeed.html" />
         <option value="$PROJECT_DIR$/SocialMedia/templates/SocialMedia/loginpage.html" />
+        <option value="$PROJECT_DIR$/SocialMedia/urls.py" />
+        <option value="$PROJECT_DIR$/SocialMedia/views.py" />
         <option value="$PROJECT_DIR$/SocialMedia/templates/SocialMedia/login.html" />
         <option value="$PROJECT_DIR$/SocialMedia/static/SocialMedia/login.css" />
-        <option value="$PROJECT_DIR$/SocialMedia/forms.py" />
-        <option value="$PROJECT_DIR$/SocialMedia/views.py" />
-        <option value="$PROJECT_DIR$/SocialMedia/templates/SocialMedia/registration/login.html" />
-        <option value="$PROJECT_DIR$/Wizzer/settings.py" />
-        <option value="$PROJECT_DIR$/Wizzer/urls.py" />
-        <option value="$PROJECT_DIR$/SocialMedia/urls.py" />
-        <option value="$PROJECT_DIR$/UserLogin/urls.py" />
-        <option value="$PROJECT_DIR$/UserLogin/templates/registration/login.html" />
-        <option value="$PROJECT_DIR$/SocialMedia/templates/SocialMedia/WizzerFeed.html" />
       </list>
     </option>
   </component>
@@ -175,6 +212,19 @@
               <item name="Wizzer" type="b2602c69:ProjectViewProjectNode" />
               <item name="Wizzer" type="462c0819:PsiDirectoryNode" />
               <item name="SocialMedia" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Wizzer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Wizzer" type="462c0819:PsiDirectoryNode" />
+              <item name="SocialMedia" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="SocialMedia" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Wizzer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Wizzer" type="462c0819:PsiDirectoryNode" />
+              <item name="SocialMedia" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -183,6 +233,11 @@
               <item name="SocialMedia" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="SocialMedia" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Wizzer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Wizzer" type="462c0819:PsiDirectoryNode" />
+              <item name="Wizzer" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -197,18 +252,13 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Joey\PycharmProjects\Wizzer\UserLogin\static\UserLogin" />
-      <recent name="C:\Users\Joey\PycharmProjects\Wizzer\static" />
-      <recent name="C:\Users\Joey\PycharmProjects\Wizzer\templates" />
-      <recent name="C:\Users\Joey\PycharmProjects\Wizzer\SocialMedia\templates\SocialMedia" />
-      <recent name="C:\Users\Joey\PycharmProjects\Wizzer\SocialMedia\templates" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Joey\PycharmProjects\Wizzer\UserLogin\static" />
-      <recent name="C:\Users\Joey\PycharmProjects\Wizzer\UserLogin\templates\registration" />
       <recent name="C:\Users\Joey\PycharmProjects\Wizzer\SocialMedia\static\SocialMedia\images" />
       <recent name="C:\Users\Joey\PycharmProjects\Wizzer\SocialMedia\static\SocialMedia" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Joey\PycharmProjects\Wizzer\SocialMedia\static\SocialMedia" />
+      <recent name="C:\Users\Joey\PycharmProjects\Wizzer\SocialMedia\static\SocialMedia\CSS" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -296,28 +346,22 @@
       <option name="project" value="LOCAL" />
       <updated>1520211591010</updated>
     </task>
-    <task id="LOCAL-00006" summary="Base Login Form added.">
-      <created>1520219410665</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1520219410665</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.51059" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.48940998" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32894737" sideWeight="0.48940998" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2647504" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="manage.py@Wizzer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32894737" sideWeight="0.49319214" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="manage.py@Wizzer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.49319214" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -369,8 +413,7 @@
     <MESSAGE value="redownloaded files" />
     <MESSAGE value="added rest API to project" />
     <MESSAGE value="Added an includes directory to the templates.&#10;Added 'post.html' which is the html generated by every post." />
-    <MESSAGE value="Base Login Form added." />
-    <option name="LAST_COMMIT_MESSAGE" value="Base Login Form added." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added an includes directory to the templates.&#10;Added 'post.html' which is the html generated by every post." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -446,7 +489,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/main.html">
+    <entry file="file://$PROJECT_DIR$/SocialMedia/templates/SocialMedia/main.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="26" lean-forward="false" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
@@ -530,7 +573,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/main.css">
+    <entry file="file://$PROJECT_DIR$/SocialMedia/static/SocialMedia/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -550,7 +593,7 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/main.js">
+    <entry file="file://$PROJECT_DIR$/SocialMedia/static/SocialMedia/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
@@ -594,7 +637,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/SocialMedia/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="27" lean-forward="false" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SocialMedia/templates/SocialMedia/post.html" />
+    <entry file="file://$PROJECT_DIR$/Wizzer/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="4" lean-forward="false" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SocialMedia/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -623,10 +682,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SocialMedia/static/SocialMedia/login.css">
+    <entry file="file://$PROJECT_DIR$/SocialMedia/templates/SocialMedia/components/post.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="35" lean-forward="false" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+        <state relative-caret-position="0">
+          <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Wizzer/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="24" column="42" lean-forward="true" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SocialMedia/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SocialMedia/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="31" column="10" lean-forward="false" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SocialMedia/templates/SocialMedia/WizzerFeed.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="90" lean-forward="false" selection-start-line="2" selection-start-column="90" selection-end-line="2" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SocialMedia/templates/SocialMedia/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="18" lean-forward="false" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -639,14 +738,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="3" lean-forward="true" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SocialMedia/static/SocialMedia/navbar.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
@@ -655,104 +746,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="18" lean-forward="false" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SocialMedia/templates/SocialMedia/components/post.html">
+    <entry file="file://$PROJECT_DIR$/SocialMedia/static/SocialMedia/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SocialMedia/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="84" lean-forward="false" selection-start-line="8" selection-start-column="84" selection-end-line="8" selection-end-column="84" />
+          <caret line="0" column="3" lean-forward="true" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SocialMedia/templates/SocialMedia/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="41" lean-forward="false" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+        <state relative-caret-position="306">
+          <caret line="18" column="53" lean-forward="false" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="53" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/UserLogin/static/UserLogin/login.css">
+    <entry file="file://$PROJECT_DIR$/SocialMedia/static/SocialMedia/login.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UserLogin/templates/registration/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UserLogin/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="35" lean-forward="false" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Wizzer/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="35" column="4" lean-forward="false" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Wizzer/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="23" column="43" lean-forward="false" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
-          <folding>
-            <element signature="e#630#662#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SocialMedia/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="40" lean-forward="false" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SocialMedia/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="25" column="66" lean-forward="false" selection-start-line="25" selection-start-column="66" selection-end-line="25" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SocialMedia/templates/SocialMedia/WizzerFeed.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="12" lean-forward="false" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
+        <state relative-caret-position="187">
+          <caret line="11" column="35" lean-forward="false" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
           <folding />
         </state>
       </provider>
