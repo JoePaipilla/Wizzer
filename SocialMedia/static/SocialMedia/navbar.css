@@ -1,4 +1,4 @@
-@import "main.css";
+@import "../../../static/main.css";
 
 .navbar {
 	display: flex;

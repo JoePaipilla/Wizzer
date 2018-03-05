@@ -32,6 +32,8 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'SocialMedia.apps.SocialmediaConfig',
+    'UserLogin.apps.UserloginConfig',
+    
     'rest_framework',
     
     'django.contrib.admin',

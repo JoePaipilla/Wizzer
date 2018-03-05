@@ -1,4 +1,4 @@
-{% extends 'SocialMedia/main.html' %}
+{% extends 'SocialMedia/../../../templates/main.html' %}
 {% load static %}
 {% block title %}Wizzer - Login{% endblock %}
 {% block css %}<link rel='stylesheet' type='text/css' href="{% static 'SocialMedia/login.css' %}"/>{% endblock %}
@@ -7,6 +7,7 @@
 <div class="login-form">
     <form method="post" action="#">
         <h1 id="title">Wizzer</h1>
+        {{ form.as_p }}
         <input class="input" type="text" name="firstname" placeholder="Username">
         <br>
         <input class="input" type="password" name="lastname" placeholder="Password">

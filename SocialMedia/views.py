@@ -25,10 +25,6 @@ def index(request):
     context = {'WizzerUser': user, 'Whizzes': whizzes, 'WhizForm': form}
     return render(request, 'SocialMedia/WizzerFeed.html', context)
 
-
-def login(request):
-    return render(request, 'SocialMedia/login.html')
-
 #API VIEWS
 class WizzerUserList(APIView):
 
