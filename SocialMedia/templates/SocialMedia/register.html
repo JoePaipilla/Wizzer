@@ -1,0 +1,16 @@
+{% extends 'SocialMedia/login.html' %}
+
+{% load static %}
+
+{% block form %}
+    <form method="post" action="{% url 'register' %}">
+        <h1 id="title">Wizzer</h1>
+        {{ form }}
+        <input id="submit" type="submit" value="Register">
+        {% csrf_token %}
+    </form>
+    <div class="subtext">
+        <span><a href="#">Forgot Password?</a></span>
+        <span>Have an account already? <a id="sign-up" href="{% url 'login' %}">Login</a></span>
+    </div>
+{% endblock %}

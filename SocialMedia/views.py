@@ -1,4 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib.auth import authenticate, login
+from django.contrib.auth.forms import UserCreationForm
 
 from .models import WizzerUser, Whiz
 from .forms import WhizForm
@@ -21,5 +23,17 @@ def index(request):
     return render(request, 'SocialMedia/WizzerFeed.html', context)
 
 
-def login(request):
-    return render(request, 'SocialMedia/login.html')
+def register(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password1']
+            form.save()
+            user = authenticate(username=username, password=password)
+            login(request, user)
+            return redirect('index')
+    else:
+        form = UserCreationForm()
+    context = {'form': form}
+    return render(request, 'SocialMedia/register.html', context)

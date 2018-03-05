@@ -5,18 +5,22 @@
 
 {% block body %}
 <div class="login-form">
+    {% block form %}
     <form method="post" action="#">
         <h1 id="title">Wizzer</h1>
-        <input class="input" type="text" name="firstname" placeholder="Username">
+        <!--<input class="input" type="text" name="firstname" placeholder="Username">-->
+        {{ form.username }}
         <br>
-        <input class="input" type="password" name="lastname" placeholder="Password">
+        <!--<input class="input" type="password" name="lastname" placeholder="Password">-->
+        {{ form.password }}
         <br>
         <input id="submit" type="submit" value="Login">
         {% csrf_token %}
     </form>
     <div class="subtext">
         <span><a href="#">Forgot Password?</a></span>
-        <span>Don't have an account? <a id="sign-up" href="#">Sign Up</a></span>
+        <span>Don't have an account? <a id="sign-up" href="{% url 'register' %}">Sign Up</a></span>
     </div>
+    {% endblock %}
 </div>
 {% endblock %}

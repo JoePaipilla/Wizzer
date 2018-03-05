@@ -17,15 +17,12 @@
     to { opacity: 1; }
 }
 
-.login-form input > * {
-}
-
 .login-form #title {
     font-size: 5em;
     text-align: center;
 }
 
-.login-form .input, #submit{
+#id_username,#id_password,#id_password1,#id_password2, #submit{
     font-size: 2em;
     border-radius: 10px;
     border: 1px solid #dfdfdf;
@@ -54,4 +51,9 @@
 
 .login-form .subtext #sign-up {
     color: purple;
+}
+
+/*dont do this*/
+.helptext, label {
+    font-size: 0;
 }
