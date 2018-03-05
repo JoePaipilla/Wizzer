@@ -23,9 +23,5 @@ from SocialMedia import views as SocialMediaViews
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('SocialMedia.urls')),
-    path('API/WizzerUserList/', SocialMediaViews.WizzerUserList.as_view()),
-    path('API/WhizList/', SocialMediaViews.WhizList.as_view())
+    path('API/', include('API.urls')),
 ]
-
-#temporary
-urlpatterns = format_suffix_patterns(urlpatterns)

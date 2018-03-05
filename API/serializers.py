@@ -1,5 +1,6 @@
 from rest_framework import serializers
-from .models import WizzerUser, Whiz
+
+from SocialMedia.models import WizzerUser, Whiz
 
 
 class WizzerUserSerializer(serializers.ModelSerializer):
