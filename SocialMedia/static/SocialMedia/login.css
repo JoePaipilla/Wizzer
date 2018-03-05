@@ -1,0 +1,57 @@
+@import "main.css";
+
+.login-form {
+    -moz-animation: fadein 1s;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+	background-color: white;
+    /*border: 1px solid #595959;*/
+    padding: 20px 100px 20px 100px;
+    border-radius: 10px;
+    justify-content: space-between;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.login-form input > * {
+}
+
+.login-form #title {
+    font-size: 5em;
+    text-align: center;
+}
+
+.login-form .input, #submit{
+    font-size: 2em;
+    border-radius: 10px;
+    border: 1px solid #dfdfdf;
+    padding: 3px;
+}
+
+.login-form .input {
+}
+
+.login-form #submit {
+    font-size: 1.5em;
+	background-color: purple;
+	color: white;
+	border: 0;
+	width: 100%;
+}
+
+.login-form #submit:hover {
+	cursor: pointer;
+}
+
+.login-form .subtext {
+    display: flex;
+    justify-content: space-around;
+}
+
+.login-form .subtext #sign-up {
+    color: purple;
+}
