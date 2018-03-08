@@ -7,7 +7,7 @@
         <h1>wizzer</h1>
     </div>
     <div class="description">
-        <a href="#"><img id="profile-photo" src="{% static 'SocialMedia/images/IMG_0757.JPG' %}"/></a>
+        <a href="#"><img id="profile-photo" src="{{ WizzerUser.profile_picture.url }}"/></a>
         <h1>{{ WizzerUser.first_name }} {{ WizzerUser.second_name }}</h1>
         <div class="follow-count">
             <h1>Following: {{ WizzerUser.following }}</h1>

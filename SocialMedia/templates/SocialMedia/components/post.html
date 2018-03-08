@@ -1,7 +1,7 @@
 {% load static %}
 <div class="post">
     <div class="top-bar">
-        <a href="#"><img id="profile-photo" src="{% static 'SocialMedia/images/IMG_0757.JPG' %}"/></a>
+        <a href="#"><img id="profile-photo" src="{{ WizzerUser.profile_picture.url }}"/></a>
         <h1>{{ whiz.whiz_poster.first_name }} {{ whiz.whiz_poster.second_name }}</h1>
         <h2>Likes: {{ whiz.likes }}</h2>
         <h2>Dislikes: {{ whiz.dislikes }}</h2>
