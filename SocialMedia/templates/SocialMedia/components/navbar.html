@@ -7,11 +7,11 @@
         <h1>wizzer</h1>
     </div>
     <div class="description">
-        <a href="#"><img id="profile-photo" src="{{ WizzerUser.profile_picture.url }}"/></a>
-        <h1>{{ WizzerUser.first_name }} {{ WizzerUser.second_name }}</h1>
+        <a href="#"><img id="profile-photo" src="{{ WizzerUser.wizzeruser.profile_picture.url }}"/></a>
+        <h1>{{ WizzerUser.get_full_name }}</h1>
         <div class="follow-count">
-            <h1>Following: {{ WizzerUser.following }}</h1>
-            <h1>Followers: {{ WizzerUser.followers }}</h1>
+            <h1>Following: {{ WizzerUser.wizzeruser.following }}</h1>
+            <h1>Followers: {{ WizzerUser.wizzeruser.followers }}</h1>
         </div>
     </div>
         <button type="button">Home</button>

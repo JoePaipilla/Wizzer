@@ -7,8 +7,9 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('login/', auth_views.login, {'template_name': 'SocialMedia/login.html'}, name='login'),
-    path('register/', views.register, name='register')
+    path('login/', views.LoginView.as_view(), name='login'),
+    path('register/', views.RegistrationView.as_view(), name='register'),
+    path('testing/', views.testing, name='testing')
 ]
 
 if settings.DEBUG:
