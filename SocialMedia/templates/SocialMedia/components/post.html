@@ -1,11 +1,12 @@
 {% load static %}
 <div class="post">
     <div class="top-bar">
-        <a href="#"><img id="profile-photo" src="{{ WizzerUser.wizzeruser.profile_picture.url }}"/></a>
-        <h1>{{ whiz.whiz_poster.first_name }} {{ whiz.whiz_poster.second_name }}</h1>
+        <a href="{% url 'profile-page' whiz.whiz_poster.user.get_username %}"><img id="profile-photo" src="{{ whiz.whiz_poster.profile_picture.url }}"/></a>
+        <h1>{{ whiz.whiz_poster.user.get_full_name }}</h1>
         <h2>Likes: {{ whiz.likes }}</h2>
         <h2>Dislikes: {{ whiz.dislikes }}</h2>
         <p>{{ whiz.time_posted }}</p>
+        <p>{{ whiz.whiz_poster.gender }}</p>
     </div>
     <div class="post-content">
         <h1>{{ whiz.content }}</h1>

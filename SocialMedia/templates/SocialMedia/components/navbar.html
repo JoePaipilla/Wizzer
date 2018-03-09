@@ -7,13 +7,14 @@
         <h1>wizzer</h1>
     </div>
     <div class="description">
-        <a href="#"><img id="profile-photo" src="{{ WizzerUser.wizzeruser.profile_picture.url }}"/></a>
+        <a href="{% url 'profile-page' WizzerUser.get_username %}"><img id="profile-photo" src="{{ WizzerUser.wizzeruser.profile_picture.url }}"/></a>
         <h1>{{ WizzerUser.get_full_name }}</h1>
         <div class="follow-count">
             <h1>Following: {{ WizzerUser.wizzeruser.following }}</h1>
             <h1>Followers: {{ WizzerUser.wizzeruser.followers }}</h1>
         </div>
     </div>
+        <!-- <a class='btn'></a> for all -->
         <button type="button">Home</button>
         <button type="button">Notifications</button>
         <button type="button">Direct Messages</button>

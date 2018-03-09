@@ -13,20 +13,25 @@ from django.contrib.auth.models import User as UserObject
 
 
 def index(request):
+    user = request.user
+    print(user)
 
     if request.method == "POST":
         form = WhizForm(request.POST)
         if form.is_valid():
-            new_whiz = Whiz(whiz_poster=WizzerUser.objects.all()[0], content=request.POST['whiz_input'])
+            #change the bottom 'whiz_poster' to the request.user object
+            new_whiz = Whiz(whiz_poster=user.wizzeruser, content=request.POST['whiz_input'])
             new_whiz.save()
             return redirect('index')
     else:
         form = WhizForm()
 
-    user = request.user
-    whizzes = Whiz.objects.all()[::-1]
-    context = {'WizzerUser': user, 'Whizzes': whizzes, 'WhizForm': form}
-    return render(request, 'SocialMedia/WizzerFeed.html', context)
+    if str(user) == 'AnonymousUser':
+        return redirect('login')
+    else:
+        whizzes = Whiz.objects.all()[::-1]
+        context = {'WizzerUser': user, 'Whizzes': whizzes, 'WhizForm': form}
+        return render(request, 'SocialMedia/WizzerFeed.html', context)
 
 class LoginView(View):
     form_class = LoginForm
@@ -45,7 +50,10 @@ class LoginView(View):
             login(request, user)
             return redirect('index')
         else:
-            return HttpResponse("DIDN'T WORK")
+            return redirect('login')
+
+def logoutView(request):
+    return HttpResponse('This is the logout view')
 
 class RegistrationView(View):
     form_class = RegistrationForm
@@ -76,6 +84,11 @@ class RegistrationView(View):
                     return redirect('testing')
                     #request.user.username etc...
         return render(request, self.template_name, {'form':form})
+
+def profilePage(request, username):
+    profile_user = UserObject.objects.get(username__exact=username)
+    context = {'ProfileUser': profile_user}
+    return render(request, 'SocialMedia/profile_page.html', context)
 
 def testing(request):
     return render(request, 'SocialMedia/test.html', {'User': request.user})

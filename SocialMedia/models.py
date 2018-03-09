@@ -3,10 +3,11 @@ from django.db.models.signals import post_save
 from django.contrib.auth.models import User
 from django.utils import timezone
 from django.dispatch import receiver
+from django import forms
 
 
 def user_directory_path(instance, filename):
-    return '{}/{}'.format(instance.username, filename)
+    return '{}/{}'.format(instance.user.username, filename)
 
 """@receiver(post_save, sender=User)
 def create_user_profile(sender, instance, created, **kwargs):
@@ -18,18 +19,19 @@ def save_user_profile(sender, instance, **kwargs):
     instance.profile.save()"""
 
 class WizzerUser(models.Model):
+    GENDER_CHOICES = (
+        ('M', 'Male'),
+        ('F', 'Female')
+    )
     user = models.OneToOneField(User, default='', on_delete=models.CASCADE)
-    #SUBJECT TO BE DELETED
-    first_name = models.CharField(max_length=30, default="")
-    second_name = models.CharField(max_length=30, default="")
-    username = models.CharField(max_length=15, default="")
-    #----------------------
     following = models.IntegerField(default=0)
     followers = models.IntegerField(default=0)
     profile_picture = models.FileField(default='', upload_to=user_directory_path, max_length=100)
+    #background_image = models.FileField(default='', upload_to=user_directory_path, max_length=100)
+    gender = models.CharField(default='', choices=GENDER_CHOICES, max_length=2)
 
     def __str__(self):
-        return self.username
+        return self.user.username
 
 
 class Whiz(models.Model):
