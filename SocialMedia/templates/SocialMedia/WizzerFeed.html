@@ -9,7 +9,7 @@
         <div class="post-form">
             <form method="POST" action="{% url 'index' %}">
                 {{ WhizForm }}
-                <input id="submit" type="submit" value="Submit">
+                <input id="submit" class='colored' type="submit" value="Submit">
                 {% csrf_token %}
             </form>
         </div>

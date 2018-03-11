@@ -8,7 +8,7 @@ from django.views.generic import View
 from django.contrib.auth.models import User as UserObject
 
 from .models import WizzerUser, Whiz
-from .forms import WhizForm, RegistrationForm, LoginForm
+from .forms import WhizForm, RegistrationForm, LoginForm, ReplyForm
 
 
 # quick view to return the view name as an html response
@@ -18,14 +18,24 @@ def default(name):
 
 def index(request):
     user = request.user
-    print(user)
-
     if request.method == "POST":
+        print(request.POST)
         form = WhizForm(request.POST)
         if form.is_valid():
             # change the bottom 'whiz_poster' to the request.user object
             new_whiz = Whiz(whiz_poster=user.wizzeruser, content=request.POST['whiz_input'])
             new_whiz.save()
+            return redirect('index')
+        elif 'delete' in request.POST:
+            Whiz.objects.get(id=request.POST['delete']).delete()
+            return redirect('index')
+        elif 'reply' in request.POST:
+            return redirect('index')
+        elif 'like' in request.POST:
+            return redirect('index')
+        elif 'dislike' in request.POST:
+            return redirect('index')
+        elif 'report' in request.POST:
             return redirect('index')
     else:
         form = WhizForm()
@@ -34,7 +44,10 @@ def index(request):
         return redirect('login')
     else:
         whizzes = Whiz.objects.all()[::-1]
-        context = {'WizzerUser': user, 'Whizzes': whizzes, 'WhizForm': form}
+        context = {'WizzerUser': user,
+                   'Whizzes': whizzes,
+                   'WhizForm': form
+                   }
         return render(request, 'SocialMedia/WizzerFeed.html', context)
 
 
@@ -43,11 +56,15 @@ class LoginView(View):
     template_name = 'SocialMedia/login.html'
 
     def get(self, request):
-        form = self.form_class(None)
-        return render(request, self.template_name, {'form': form})
+        try:
+            current_user = UserObject.objects.get(username__exact=request.user)
+            if current_user.is_authenticated:
+                return redirect('index')
+        except:
+            form = self.form_class(None)
+            return render(request, self.template_name, {'form': form})
 
     def post(self, request):
-        print(request.POST)
         username = request.POST['username']
         password = request.POST['password']
         user = authenticate(username=username, password=password)
@@ -91,7 +108,7 @@ class RegistrationView(View):
                     login(request, user)
                     return redirect('testing')
                     # request.user.username etc...
-        return render(request, self.template_name, {'form':form})
+        return render(request, self.template_name, {'form': form})
 
 
 def follows(request):
@@ -100,14 +117,16 @@ def follows(request):
 
 def profile_page(request, username):
     user = request.user
-    form = WhizForm(None)
+    whiz_form = WhizForm(None)
+    reply_form = ReplyForm(None)
     profile_user = get_object_or_404(UserObject.objects, username__exact=username)
     profile_user_whizzes = UserObject.objects.get(username__exact=username).wizzeruser.whiz_set.all()[::-1]
     context = {
         'ProfileUser': profile_user,
         'ProfileUserWhizzes': profile_user_whizzes,
         'MainUser': user,
-        'WhizForm': form
+        'WhizForm': whiz_form,
+        'ReplyForm': reply_form
     }
     return render(request, 'SocialMedia/profile_page.html', context)
 

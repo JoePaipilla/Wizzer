@@ -1,13 +1,15 @@
+@import "themes.css";
+
 * {
 	font-family: Oswald;
 	font-weight: 200;
 	margin: 0;
 	padding: 0;
-	color: #a5a5a5;
+	color: var(--subtext-color);
 }
 
 html {
-	background-color: #2c2c2c;
+	background-color: var(--background-scheme);
 	height: 100%;
 }
 

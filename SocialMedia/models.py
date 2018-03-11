@@ -32,10 +32,11 @@ class WizzerUser(models.Model):
     user = models.OneToOneField(User, default='', on_delete=models.CASCADE)
     following = models.IntegerField(default=0)
     followers = models.IntegerField(default=0)
-    profile_picture = models.FileField(default='', upload_to=profile_picture_path, max_length=100)
-    background_image = models.FileField(default='', upload_to=background_image_path, max_length=100)
+    profile_picture = models.FileField(
+        default=r'default\default-profile-picture.jpg', upload_to=profile_picture_path, max_length=100)
+    background_image = models.FileField(
+        default=r'default\default-background.jpg', upload_to=background_image_path, max_length=100)
     gender = models.CharField(default='', choices=GENDER_CHOICES, max_length=2)
-
 
     def __str__(self):
         return self.user.username

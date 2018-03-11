@@ -11,17 +11,17 @@
             <a href="{% url 'profile-page' WizzerUser.get_username %}"><img id="profile-photo" src="{{ WizzerUser.wizzeruser.profile_picture.url }}"/></a>
             <h1>{{ WizzerUser.get_full_name }}</h1>
             <div class="follow-count">
-                <h1><a href="{% url 'follows' %}">Following: {{ WizzerUser.wizzeruser.following }}</a></h1>
-                <h1><a href="{% url 'follows' %}">Followers: {{ WizzerUser.wizzeruser.followers }}</a></h1>
+                <h1><a class='colored' href="{% url 'follows' %}">Following: {{ WizzerUser.wizzeruser.following }}</a></h1>
+                <h1><a class='colored' href="{% url 'follows' %}">Followers: {{ WizzerUser.wizzeruser.followers }}</a></h1>
             </div>
         </div>
     </div>
         <!-- <a class='btn'></a> for all -->
-        <a class='btn' href="{% url 'index' %}">Home</a>
-        <a class='btn' href="{% url 'gallery' %}">Gallery</a>
-        <a class='btn' href="{% url 'directmessages' %}">Direct Messages</a>
-        <a class='btn' href="{% url 'notifications' %}">Notifications</a>
-        <a class='btn' href="{% url 'settings' %}">Settings</a>
-        <a class='btn' href="{% url 'logout' %}">Logout</a>
+        <a class='colored btn' href="{% url 'index' %}">Home</a>
+        <a class='colored btn' href="{% url 'gallery' %}">Gallery</a>
+        <a class='colored btn' href="{% url 'directmessages' %}">Direct Messages</a>
+        <a class='colored btn' href="{% url 'notifications' %}">Notifications</a>
+        <a class='colored btn' href="{% url 'settings' %}">Settings</a>
+        <a class='colored btn' href="{% url 'logout' %}">Logout</a>
     {% endblock %}
 </div>

@@ -7,14 +7,21 @@
         <h2>Dislikes: {{ whiz.dislikes }}</h2>
         <p>{{ whiz.time_posted }}</p>
         <p>{{ whiz.whiz_poster.gender }}</p>
+        <!-- BOTTOM DOES NOT ACCOUNT FOR OTHER PAGES EXCEPT THE FIRST HOMEPAGE-->
+        {% if whiz.whiz_poster.user.id ==  WizzerUser.id %}
+        <form id="post-form" method="post" action="{% url 'index' %}">
+            <button id="delete" type="submit" value="{{ whiz.id }}" name="delete">D</button>
+            {% csrf_token %}
+        </form>
+        {% endif %}
     </div>
     <div class="post-content">
         <h1>{{ whiz.content }}</h1>
     </div>
     <div class="post-footer">
-        <button type="button">Write Reply</button>
-        <button type="button">Like</button>
-        <button type="button">Dislike</button>
-        <button type="button">Report</button>
+            <button id="delete" type="submit" value="{{ whiz.id }}" name="reply" form="post-form">Write Reply</button>
+            <button id="delete" type="submit" value="{{ whiz.id }}" name="like" form="post-form">Like</button>
+            <button id="delete" type="submit" value="{{ whiz.id }}" name="dislike" form="post-form">Dislike</button>
+            <button id="delete" type="submit" value="{{ whiz.id }}" name="report" form="post-form">Report</button>
     </div>
 </div>

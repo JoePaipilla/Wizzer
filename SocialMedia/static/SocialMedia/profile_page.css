@@ -15,11 +15,11 @@
 .main .header-display #shader {
 	height: 100%;
 	width: 100%;
-	background-color: rgba(0, 0, 0, .25);
+	background-color: var(--shader);
 }
 
 .main .header-display * {
-    color: #dfdfdf;
+    color: var(--dark-text-color);
 }
 
 .main .header-display .description {
@@ -58,7 +58,7 @@
 }
 
 .main .header-display .description .follow-count > *:hover{
-	background-color: purple;
+	background-color: var(--color-scheme);
 	-moz-transition: .15s ease;
 }
 
