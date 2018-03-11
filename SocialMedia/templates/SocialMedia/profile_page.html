@@ -1,3 +1,33 @@
-{{ ProfileUser.username }}'s profile page<br>
+{% extends 'SocialMedia/main.html' %}
+{% load static %}
+{% block css %}<link rel='stylesheet' type='text/css' href="{% static 'SocialMedia/profile_page.css' %}"/>{% endblock %}
+
+
+{% block body %}
+    <div class="main">
+        <div class="header-display" style="background: url('{{ ProfileUser.wizzeruser.background_image.url }}')">
+            <div id="shader">
+                <div class="description">
+                    <!--<a href="{% url 'profile-page' ProfileUser.get_username %}">--><img id="profile-photo" src="{{ ProfileUser.wizzeruser.profile_picture.url }}"/><!--</a>-->
+                    <!--<h1 id="username">{{ ProfileUser.username }}</h1>
+                    <div class="follow-count">
+                        <h1>Following: {{ ProfileUser.wizzeruser.following }}</h1>
+                        <h1>Followers: {{ ProfileUser.wizzeruser.followers }}</h1>
+                    </div>-->
+                </div>
+            </div>
+        </div>
+        <div class="post-container">
+            {% for whiz in ProfileUserWhizzes %}
+                {% include 'SocialMedia/components/post.html' %}
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
+
+
+
+
+<!--{{ ProfileUser.username }}'s profile page<br>
 {{ ProfileUser.wizzeruser.followers }}<br>
-{{ ProfileUser.wizzeruser.following }}
+{{ ProfileUser.wizzeruser.following }}-->

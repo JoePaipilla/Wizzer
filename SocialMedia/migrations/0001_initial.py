@@ -33,7 +33,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('following', models.IntegerField(default=0)),
                 ('followers', models.IntegerField(default=0)),
-                ('profile_picture', models.FileField(default='', upload_to=SocialMedia.models.user_directory_path)),
+                ('profile_picture', models.FileField(default='', upload_to=SocialMedia.models.profile_picture_path)),
                 ('user', models.OneToOneField(default='', on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
             ],
         ),

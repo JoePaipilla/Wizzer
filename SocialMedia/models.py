@@ -6,9 +6,6 @@ from django.dispatch import receiver
 from django import forms
 
 
-def user_directory_path(instance, filename):
-    return '{}/{}'.format(instance.user.username, filename)
-
 """@receiver(post_save, sender=User)
 def create_user_profile(sender, instance, created, **kwargs):
     if created:
@@ -18,6 +15,15 @@ def create_user_profile(sender, instance, created, **kwargs):
 def save_user_profile(sender, instance, **kwargs):
     instance.profile.save()"""
 
+
+def profile_picture_path(instance, filename):
+    return '{}/profile-picture/{}'.format(instance.user.username, filename)
+
+
+def background_image_path(instance, filename):
+    return '{}/background-image/{}'.format(instance.user.username, filename)
+
+
 class WizzerUser(models.Model):
     GENDER_CHOICES = (
         ('M', 'Male'),
@@ -26,9 +32,10 @@ class WizzerUser(models.Model):
     user = models.OneToOneField(User, default='', on_delete=models.CASCADE)
     following = models.IntegerField(default=0)
     followers = models.IntegerField(default=0)
-    profile_picture = models.FileField(default='', upload_to=user_directory_path, max_length=100)
-    #background_image = models.FileField(default='', upload_to=user_directory_path, max_length=100)
+    profile_picture = models.FileField(default='', upload_to=profile_picture_path, max_length=100)
+    background_image = models.FileField(default='', upload_to=background_image_path, max_length=100)
     gender = models.CharField(default='', choices=GENDER_CHOICES, max_length=2)
+
 
     def __str__(self):
         return self.user.username

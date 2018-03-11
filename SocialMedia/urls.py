@@ -8,9 +8,14 @@ from . import views
 urlpatterns = [
     path('', views.index, name='index'),
     path('login/', views.LoginView.as_view(), name='login'),
-    path('logout/', views.logoutView, name='logout'),
+    path('logout/', views.logout_view, name='logout'),
     path('register/', views.RegistrationView.as_view(), name='register'),
-    path('<username>/', views.profilePage, name='profile-page'),
+    path('follows/', views.follows, name='follows'),
+    path('profile/<username>/', views.profile_page, name='profile-page'),
+    path('notifications/', views.notifications, name='notifications'),
+    path('directmessages/', views.direct_messages, name='directmessages'),
+    path('gallery/', views.gallery, name='gallery'),
+    path('settings/', views.settings, name='settings'),
     path('testing/', views.testing, name='testing')
 ]
 

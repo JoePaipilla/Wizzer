@@ -1,0 +1,72 @@
+@import "mainDiv.css";
+/*NEEDS FIXING*/
+.main {
+	margin-left: 0;
+    padding: 0;
+
+}
+
+.main .header-display, .main .header-display #shader{
+    height: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.main .header-display #shader {
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, .25);
+}
+
+.main .header-display * {
+    color: #dfdfdf;
+}
+
+.main .header-display .description {
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
+}
+
+.main .header-display .description a {
+}
+
+.main .header-display .description #username {
+    font-size: 5em;
+    font-weight: normal;
+}
+
+.main .header-display .description #profile-photo {
+	border-radius: 50%;
+	object-fit: cover;
+	height: 150px;
+	width: 150px;
+    /*margin: auto;*/
+}
+
+.main .header-display .description .follow-count {
+	display: flex;
+	flex-direction: row;
+	font-size: 1em;
+	width: 100%;
+	justify-content: space-around;
+}
+
+.main .header-display .description .follow-count > *{
+	width: auto;
+	text-align: center;
+}
+
+.main .header-display .description .follow-count > *:hover{
+	background-color: purple;
+	-moz-transition: .15s ease;
+}
+
+.main .post-form form{
+	margin: 0;
+
+}
+.main .post-container {
+
+    /*padding: 10px 20px 10px 20px;*/
+}

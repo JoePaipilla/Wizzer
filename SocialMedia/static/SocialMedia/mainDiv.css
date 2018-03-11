@@ -29,7 +29,7 @@
 
 .main .post-form form #submit {
 	background-color: purple;
-	color: white;
+    color: #dfdfdf;
 	border: 0;
 	width: 100%;
 }
@@ -96,6 +96,7 @@
 }
 
 .main .post-container .post .post-footer > *:hover{
+    color: #dfdfdf;
 	background-color: purple;
 	-moz-transition: .15s ease;
 }

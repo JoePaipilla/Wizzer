@@ -19,11 +19,22 @@
 	display: flex;
 	flex-direction: column;
 	border-bottom: 1px solid #595959;
-	padding-top: 5px;
-	background:url('images/bg.jpg');
 }
 
-.navbar .description > * {
+.navbar .description * {
+    color: #dfdfdf;
+}
+
+.navbar .description #shader {
+	height: 100%;
+	width: 100%;
+	padding-top: 5px;
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	background-color: rgba(0, 0, 0, .25);
+}
+.navbar .description #shader > * {
 	margin: 0 auto;
 	/**/
 }
@@ -49,6 +60,7 @@
 }
 
 .navbar .description .follow-count > *:hover{
+	cursor: pointer;
 	background-color: purple;
 	-moz-transition: .15s ease;
 }
@@ -61,6 +73,7 @@
 }
 
 .navbar > *:not(.description):not(.logo):hover {
+    color: #dfdfdf;
 	background-color: purple;
 	-moz-transition: .15s ease;
 }

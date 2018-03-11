@@ -30,3 +30,10 @@ textarea {
 	resize: none;
 	border: 0;
 }
+
+.btn {
+
+}
+.btn:hover {
+	cursor: pointer;
+}

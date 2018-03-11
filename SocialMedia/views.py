@@ -1,15 +1,19 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import UserCreationForm
 from django.http import HttpResponse
 from django.urls import reverse_lazy
 from django.views import generic
 from django.views.generic import View
+from django.contrib.auth.models import User as UserObject
 
 from .models import WizzerUser, Whiz
 from .forms import WhizForm, RegistrationForm, LoginForm
 
-from django.contrib.auth.models import User as UserObject
+
+# quick view to return the view name as an html response
+def default(name):
+    return HttpResponse('<h1>This is the {} view.</h1>'.format(name))
 
 
 def index(request):
@@ -19,7 +23,7 @@ def index(request):
     if request.method == "POST":
         form = WhizForm(request.POST)
         if form.is_valid():
-            #change the bottom 'whiz_poster' to the request.user object
+            # change the bottom 'whiz_poster' to the request.user object
             new_whiz = Whiz(whiz_poster=user.wizzeruser, content=request.POST['whiz_input'])
             new_whiz.save()
             return redirect('index')
@@ -32,6 +36,7 @@ def index(request):
         whizzes = Whiz.objects.all()[::-1]
         context = {'WizzerUser': user, 'Whizzes': whizzes, 'WhizForm': form}
         return render(request, 'SocialMedia/WizzerFeed.html', context)
+
 
 class LoginView(View):
     form_class = LoginForm
@@ -52,8 +57,11 @@ class LoginView(View):
         else:
             return redirect('login')
 
-def logoutView(request):
-    return HttpResponse('This is the logout view')
+
+def logout_view(request):
+    logout(request)
+    return redirect('login')
+
 
 class RegistrationView(View):
     form_class = RegistrationForm
@@ -82,16 +90,47 @@ class RegistrationView(View):
 
                     login(request, user)
                     return redirect('testing')
-                    #request.user.username etc...
+                    # request.user.username etc...
         return render(request, self.template_name, {'form':form})
 
-def profilePage(request, username):
-    profile_user = UserObject.objects.get(username__exact=username)
-    context = {'ProfileUser': profile_user}
+
+def follows(request):
+    return default(follows.__name__)
+
+
+def profile_page(request, username):
+    user = request.user
+    form = WhizForm(None)
+    profile_user = get_object_or_404(UserObject.objects, username__exact=username)
+    profile_user_whizzes = UserObject.objects.get(username__exact=username).wizzeruser.whiz_set.all()[::-1]
+    context = {
+        'ProfileUser': profile_user,
+        'ProfileUserWhizzes': profile_user_whizzes,
+        'MainUser': user,
+        'WhizForm': form
+    }
     return render(request, 'SocialMedia/profile_page.html', context)
+
+
+def notifications(request):
+    return default(notifications.__name__)
+
+
+def direct_messages(request):
+    return default(direct_messages.__name__)
+
+
+def gallery(request):
+    return default(gallery.__name__)
+
+
+def settings(request):
+    return default(settings.__name__)
+
 
 def testing(request):
     return render(request, 'SocialMedia/test.html', {'User': request.user})
+
 
 """def register(request):
     if request.method == 'POST':
