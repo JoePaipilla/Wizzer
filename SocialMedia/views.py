@@ -8,7 +8,7 @@ from django.views.generic import View
 from django.contrib.auth.models import User as UserObject
 from django.db import IntegrityError
 
-from .models import WizzerUser, Whiz, Like, Dislike
+from .models import WizzerUser, Whiz
 from .forms import WhizForm, RegistrationForm, LoginForm, ReplyForm
 
 
@@ -33,19 +33,17 @@ def index(request):
         elif 'like' in request.POST:
             whiz = Whiz.objects.get(id=request.POST['like'])
             liked_user = UserObject.objects.get(username__exact=user).wizzeruser
-            try:
-                Like.objects.get(whiz=whiz, liked_by=liked_user).delete()
-            except Exception as e:
-                new_like = Like(whiz=whiz, liked_by=liked_user)
-                new_like.save()
+            if liked_user not in whiz.likes.all():
+                whiz.likes.add(liked_user)
+            else:
+                whiz.likes.remove(liked_user)
         elif 'dislike' in request.POST:
             whiz = Whiz.objects.get(id=request.POST['dislike'])
             disliked_user = UserObject.objects.get(username__exact=user).wizzeruser
-            try:
-                Dislike.objects.get(disliked_by=disliked_user).delete()
-            except Exception as e:
-                new_dislike = Dislike(whiz=whiz, disliked_by=disliked_user)
-                new_dislike.save()
+            if disliked_user not in whiz.dislikes.all():
+                whiz.dislikes.add(disliked_user)
+            else:
+                whiz.dislikes.remove(disliked_user)
         elif 'report' in request.POST:
             pass
         elif 'follow' in request.POST:

@@ -1,34 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/SocialMedia/models.py" line="50" mnemonic="9" />
+    <bookmark url="file://$PROJECT_DIR$/SocialMedia/models.py" line="52" mnemonic="9" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0851abcf-ed13-49e4-aa83-25e2683d2564" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/SocialMedia/migrations/0002_auto_20180312_2330.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SocialMedia/migrations/0003_auto_20180313_0037.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SocialMedia/migrations/0004_auto_20180313_0051.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SocialMedia/migrations/0005_auto_20180313_0207.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SocialMedia/migrations/0006_auto_20180313_0220.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SocialMedia/migrations/0007_auto_20180313_0220.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SocialMedia/migrations/0008_auto_20180313_0238.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SocialMedia/migrations/0009_auto_20180313_0421.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SocialMedia/migrations/0010_auto_20180313_0423.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SocialMedia/static/SocialMedia/dark_theme.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SocialMedia/static/SocialMedia/light_theme.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/SocialMedia/migrations/0011_auto_20180313_0539.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/SocialMedia/admin.py" afterPath="$PROJECT_DIR$/SocialMedia/admin.py" />
-      <change beforePath="$PROJECT_DIR$/SocialMedia/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/SocialMedia/migrations/0001_initial.py" />
-      <change beforePath="$PROJECT_DIR$/SocialMedia/migrations/0002_wizzeruser_gender.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/SocialMedia/migrations/0003_auto_20180311_0122.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/SocialMedia/migrations/0004_auto_20180311_0533.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/SocialMedia/migrations/0005_auto_20180311_0535.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/SocialMedia/migrations/0006_auto_20180311_0538.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/SocialMedia/migrations/0007_auto_20180311_0542.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/SocialMedia/migrations/0008_auto_20180311_0543.py" afterPath="" />
       <change beforePath="$PROJECT_DIR$/SocialMedia/models.py" afterPath="$PROJECT_DIR$/SocialMedia/models.py" />
-      <change beforePath="$PROJECT_DIR$/SocialMedia/static/SocialMedia/mainDiv.css" afterPath="$PROJECT_DIR$/SocialMedia/static/SocialMedia/mainDiv.css" />
-      <change beforePath="$PROJECT_DIR$/SocialMedia/templates/SocialMedia/components/navbar.html" afterPath="$PROJECT_DIR$/SocialMedia/templates/SocialMedia/components/navbar.html" />
       <change beforePath="$PROJECT_DIR$/SocialMedia/templates/SocialMedia/components/post.html" afterPath="$PROJECT_DIR$/SocialMedia/templates/SocialMedia/components/post.html" />
       <change beforePath="$PROJECT_DIR$/SocialMedia/views.py" afterPath="$PROJECT_DIR$/SocialMedia/views.py" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
@@ -62,47 +42,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SocialMedia/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="458">
+              <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SocialMedia/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="50" column="38" lean-forward="true" selection-start-line="50" selection-start-column="38" selection-end-line="50" selection-end-column="38" />
+            <state relative-caret-position="105">
+              <caret line="35" column="22" lean-forward="true" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
               <folding>
                 <element signature="e#0#64#0" expanded="true" />
-                <element signature="e#3117#3855#0" expanded="false" />
-                <element signature="e#3888#3932#0" expanded="false" />
-                <element signature="e#5853#5924#0" expanded="false" />
-                <element signature="e#5927#6471#1" expanded="false" />
+                <element signature="e#2979#3717#0" expanded="false" />
+                <element signature="e#3750#3794#0" expanded="false" />
+                <element signature="e#5715#5786#0" expanded="false" />
+                <element signature="e#5789#6333#1" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="navbar.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SocialMedia/templates/SocialMedia/components/navbar.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="117" lean-forward="false" selection-start-line="14" selection-start-column="117" selection-end-line="14" selection-end-column="117" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="post.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="post.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SocialMedia/templates/SocialMedia/components/post.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="19" column="22" lean-forward="true" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+            <state relative-caret-position="270">
+              <caret line="36" column="54" lean-forward="false" selection-start-line="36" selection-start-column="54" selection-end-line="36" selection-end-column="54" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SocialMedia/models.py">
+      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SocialMedia/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="33" column="105" lean-forward="false" selection-start-line="33" selection-start-column="105" selection-end-line="33" selection-end-column="105" />
+            <state relative-caret-position="51">
+              <caret line="5" column="25" lean-forward="false" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -161,12 +141,12 @@
         <option value="$PROJECT_DIR$/SocialMedia/static/SocialMedia/light_theme.css" />
         <option value="$PROJECT_DIR$/SocialMedia/static/SocialMedia/main.css" />
         <option value="$PROJECT_DIR$/SocialMedia/templates/SocialMedia/login.html" />
-        <option value="$PROJECT_DIR$/SocialMedia/admin.py" />
         <option value="$PROJECT_DIR$/SocialMedia/static/SocialMedia/mainDiv.css" />
-        <option value="$PROJECT_DIR$/SocialMedia/models.py" />
         <option value="$PROJECT_DIR$/SocialMedia/templates/SocialMedia/components/navbar.html" />
-        <option value="$PROJECT_DIR$/SocialMedia/views.py" />
+        <option value="$PROJECT_DIR$/SocialMedia/admin.py" />
         <option value="$PROJECT_DIR$/SocialMedia/templates/SocialMedia/components/post.html" />
+        <option value="$PROJECT_DIR$/SocialMedia/views.py" />
+        <option value="$PROJECT_DIR$/SocialMedia/models.py" />
       </list>
     </option>
   </component>
@@ -470,7 +450,14 @@
       <option name="project" value="LOCAL" />
       <updated>1520778632405</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Added a like and dislike system and a follow system.">
+      <created>1520933224724</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1520933224724</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TodoView">
@@ -491,13 +478,13 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="18" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="19" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30332828" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30257186" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="20" side_tool="false" content_ui="tabs" />
-      <window_info id="manage.py@Wizzer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24177632" sideWeight="0.48260212" order="21" side_tool="false" content_ui="tabs" />
+      <window_info id="manage.py@Wizzer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2911184" sideWeight="0.48260212" order="21" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
@@ -579,7 +566,8 @@
     <MESSAGE value="Added some new pages and color enhancements." />
     <MESSAGE value="ok" />
     <MESSAGE value="Added a main theme css file that all the other files inherit colors from. Added a delete button to all posts made by you." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a main theme css file that all the other files inherit colors from. Added a delete button to all posts made by you." />
+    <MESSAGE value="Added a like and dislike system and a follow system." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a like and dislike system and a follow system." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -864,16 +852,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SocialMedia/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#32#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SocialMedia/templates/SocialMedia/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -898,14 +876,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SocialMedia/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="33" column="105" lean-forward="false" selection-start-line="33" selection-start-column="105" selection-end-line="33" selection-end-column="105" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SocialMedia/templates/SocialMedia/components/navbar.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -914,24 +884,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SocialMedia/views.py">
+    <entry file="file://$PROJECT_DIR$/SocialMedia/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="50" column="38" lean-forward="true" selection-start-line="50" selection-start-column="38" selection-end-line="50" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#64#0" expanded="true" />
-            <element signature="e#3117#3855#0" expanded="false" />
-            <element signature="e#3888#3932#0" expanded="false" />
-            <element signature="e#5853#5924#0" expanded="false" />
-            <element signature="e#5927#6471#1" expanded="false" />
-          </folding>
+        <state relative-caret-position="51">
+          <caret line="5" column="25" lean-forward="false" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SocialMedia/templates/SocialMedia/components/post.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="19" column="22" lean-forward="true" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+        <state relative-caret-position="270">
+          <caret line="36" column="54" lean-forward="false" selection-start-line="36" selection-start-column="54" selection-end-line="36" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SocialMedia/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="35" column="22" lean-forward="true" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#64#0" expanded="true" />
+            <element signature="e#2979#3717#0" expanded="false" />
+            <element signature="e#3750#3794#0" expanded="false" />
+            <element signature="e#5715#5786#0" expanded="false" />
+            <element signature="e#5789#6333#1" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SocialMedia/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
           <folding />
         </state>
       </provider>

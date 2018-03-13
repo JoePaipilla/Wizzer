@@ -46,22 +46,8 @@ class Whiz(models.Model):
     whiz_poster = models.ForeignKey(WizzerUser, on_delete=models.CASCADE)
     content = models.TextField()
     time_posted = models.DateTimeField(default=timezone.now)
+    likes = models.ManyToManyField(WizzerUser, blank=True, related_name='like_set')
+    dislikes = models.ManyToManyField(WizzerUser, blank=True, related_name='dislike_set')
 
     def __str__(self):
         return "[{}] {}".format(self.whiz_poster, self.content)
-
-
-class Like(models.Model):
-    whiz = models.ForeignKey(Whiz, on_delete=models.CASCADE)
-    liked_by = models.ForeignKey(WizzerUser, on_delete=models.CASCADE)
-
-    def __str__(self):
-        return "{} liked \"{}\" by {}".format(self.liked_by, self.whiz.content, self.whiz.whiz_poster)
-
-
-class Dislike(models.Model):
-    whiz = models.ForeignKey(Whiz, on_delete=models.CASCADE)
-    disliked_by = models.ForeignKey(WizzerUser, on_delete=models.CASCADE)
-
-    def __str__(self):
-        return "{} liked \"{}\" by {}".format(self.disliked_by, self.whiz.content, self.whiz.whiz_poster)
