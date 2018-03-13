@@ -6,8 +6,9 @@ from django.urls import reverse_lazy
 from django.views import generic
 from django.views.generic import View
 from django.contrib.auth.models import User as UserObject
+from django.db import IntegrityError
 
-from .models import WizzerUser, Whiz
+from .models import WizzerUser, Whiz, Like, Dislike
 from .forms import WhizForm, RegistrationForm, LoginForm, ReplyForm
 
 
@@ -25,18 +26,40 @@ def index(request):
             # change the bottom 'whiz_poster' to the request.user object
             new_whiz = Whiz(whiz_poster=user.wizzeruser, content=request.POST['whiz_input'])
             new_whiz.save()
-            return redirect('index')
         elif 'delete' in request.POST:
             Whiz.objects.get(id=request.POST['delete']).delete()
-            return redirect('index')
         elif 'reply' in request.POST:
-            return redirect('index')
+            pass
         elif 'like' in request.POST:
-            return redirect('index')
+            whiz = Whiz.objects.get(id=request.POST['like'])
+            liked_user = UserObject.objects.get(username__exact=user).wizzeruser
+            try:
+                Like.objects.get(whiz=whiz, liked_by=liked_user).delete()
+            except Exception as e:
+                new_like = Like(whiz=whiz, liked_by=liked_user)
+                new_like.save()
         elif 'dislike' in request.POST:
-            return redirect('index')
+            whiz = Whiz.objects.get(id=request.POST['dislike'])
+            disliked_user = UserObject.objects.get(username__exact=user).wizzeruser
+            try:
+                Dislike.objects.get(disliked_by=disliked_user).delete()
+            except Exception as e:
+                new_dislike = Dislike(whiz=whiz, disliked_by=disliked_user)
+                new_dislike.save()
         elif 'report' in request.POST:
-            return redirect('index')
+            pass
+        elif 'follow' in request.POST:
+            self_user = UserObject.objects.get(username__exact=user).wizzeruser
+            followed_user = UserObject.objects.get(username__exact=request.POST['follow']).wizzeruser
+            if self_user in followed_user.followers.all():
+                followed_user.followers.remove(self_user)
+                self_user.following.remove(followed_user)
+            else:
+                followed_user.followers.add(self_user)
+                followed_user.save()
+                self_user.following.add(followed_user)
+                self_user.save()
+        return redirect('index')
     else:
         form = WhizForm()
 

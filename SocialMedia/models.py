@@ -30,8 +30,8 @@ class WizzerUser(models.Model):
         ('F', 'Female')
     )
     user = models.OneToOneField(User, default='', on_delete=models.CASCADE)
-    following = models.IntegerField(default=0)
-    followers = models.IntegerField(default=0)
+    following = models.ManyToManyField('self', blank=True, related_name='following_set', symmetrical=False)
+    followers = models.ManyToManyField('self', blank=True, related_name='follower_set', symmetrical=False)
     profile_picture = models.FileField(
         default=r'default\default-profile-picture.jpg', upload_to=profile_picture_path, max_length=100)
     background_image = models.FileField(
@@ -45,9 +45,23 @@ class WizzerUser(models.Model):
 class Whiz(models.Model):
     whiz_poster = models.ForeignKey(WizzerUser, on_delete=models.CASCADE)
     content = models.TextField()
-    likes = models.IntegerField(default=0)
-    dislikes = models.IntegerField(default=0)
     time_posted = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
-        return "[{}] WHIZ #{} - {}".format(self.whiz_poster, self.id, self.content)
+        return "[{}] {}".format(self.whiz_poster, self.content)
+
+
+class Like(models.Model):
+    whiz = models.ForeignKey(Whiz, on_delete=models.CASCADE)
+    liked_by = models.ForeignKey(WizzerUser, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return "{} liked \"{}\" by {}".format(self.liked_by, self.whiz.content, self.whiz.whiz_poster)
+
+
+class Dislike(models.Model):
+    whiz = models.ForeignKey(Whiz, on_delete=models.CASCADE)
+    disliked_by = models.ForeignKey(WizzerUser, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return "{} liked \"{}\" by {}".format(self.disliked_by, self.whiz.content, self.whiz.whiz_poster)

@@ -11,8 +11,8 @@
             <a href="{% url 'profile-page' WizzerUser.get_username %}"><img id="profile-photo" src="{{ WizzerUser.wizzeruser.profile_picture.url }}"/></a>
             <h1>{{ WizzerUser.get_full_name }}</h1>
             <div class="follow-count">
-                <h1><a class='colored' href="{% url 'follows' %}">Following: {{ WizzerUser.wizzeruser.following }}</a></h1>
-                <h1><a class='colored' href="{% url 'follows' %}">Followers: {{ WizzerUser.wizzeruser.followers }}</a></h1>
+                <h1><a class='colored' href="{% url 'follows' %}">Following: {{ WizzerUser.wizzeruser.following.count }}</a></h1>
+                <h1><a class='colored' href="{% url 'follows' %}">Followers: {{ WizzerUser.wizzeruser.followers.count }}</a></h1>
             </div>
         </div>
     </div>

@@ -2,21 +2,41 @@
 <div class="post">
     <div class="top-bar">
         <a href="{% url 'profile-page' whiz.whiz_poster.user.get_username %}"><img id="profile-photo" src="{{ whiz.whiz_poster.profile_picture.url }}"/></a>
-        <h1>{{ whiz.whiz_poster.user.get_full_name }}</h1>
-        <h2>Likes: {{ whiz.likes }}</h2>
-        <h2>Dislikes: {{ whiz.dislikes }}</h2>
-        <p>{{ whiz.time_posted }}</p>
-        <p>{{ whiz.whiz_poster.gender }}</p>
+        <div class="name">
+            <h1>{{ whiz.whiz_poster.user.get_full_name }}</h1>
+            <a href="{% url 'profile-page' whiz.whiz_poster.user.get_username %}"><h2>@{{ whiz.whiz_poster.user.get_username }}</h2></a>
+        </div>
+        <div class="follow-info">
+            <h2>Following: {{ whiz.whiz_poster.following.count }}</h2>
+            <h2>Followers: {{ whiz.whiz_poster.followers.count }}</h2>
+        </div>
         <!-- BOTTOM DOES NOT ACCOUNT FOR OTHER PAGES EXCEPT THE FIRST HOMEPAGE-->
-        {% if whiz.whiz_poster.user.id ==  WizzerUser.id %}
-        <form id="post-form" method="post" action="{% url 'index' %}">
-            <button id="delete" type="submit" value="{{ whiz.id }}" name="delete">D</button>
-            {% csrf_token %}
-        </form>
-        {% endif %}
+        <div class="user-buttons">
+            {% if whiz.whiz_poster.user.id ==  WizzerUser.id %}
+            <form id="post-form" method="post" action="{% url 'index' %}">
+                <button class="button" id="delete" type="submit" value="{{ whiz.id }}" name="delete">X</button>
+                {% csrf_token %}
+            </form>
+            {% else %}
+            <form id="post-form" method="post" action="{% url 'index' %}">
+                {% csrf_token %}
+            </form>
+            <button class="button" id="follow" type="submit" form="post-form" value="{{ whiz.whiz_poster }}" name="follow">Follow</button>
+            <button class="button" id="message" type="submit" form="post-form" value="{{ whiz.whiz_poster }}" name="message">Message</button>
+            <button class="button" id="settings" type="submit" form="post-form" value="{{ whiz.whiz_poster }}" name="settings">Settings</button>
+            {% endif %}
+        </div>
+
     </div>
     <div class="post-content">
         <h1>{{ whiz.content }}</h1>
+    </div>
+    <div class="post-info">
+        <ul>
+            <h2><a href="#">Likes: {{ whiz.like_set.count}}</a></h2>
+            <h2><a href="#">Dislikes: {{ whiz.dislike_set.count }}</a></h2>
+        </ul>
+        <p id="time-posted">{{ whiz.time_posted }}</p>
     </div>
     <div class="post-footer">
             <button id="delete" type="submit" value="{{ whiz.id }}" name="reply" form="post-form">Write Reply</button>

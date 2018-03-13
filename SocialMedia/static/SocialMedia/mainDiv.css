@@ -46,6 +46,7 @@
 	/*height: 100%;*/
 	display: flex;
 	flex-direction: column;
+
 }
 
 .main .post-container .post {
@@ -73,31 +74,84 @@
 	padding-right: 10px;
 }
 
-.main .post-container .post .top-bar h1{
+.main .post-container .post .top-bar .name {
+	display: flex;
+	flex-direction: column;
 }
 
-.main .post-container .post .top-bar #delete {
+.main .post-container .post .top-bar .name h2 {
+	color: var(--subtext-color);
+}
+
+.main .post-container .post .top-bar .follow-info {
+	display: flex;
+	flex-direction: column;
+	margin-left: 5px;
+}
+
+.main .post-container .post .top-bar .follow-info * {
+	color: var(--subtext-color);
+}
+
+.main .post-container .post .top-bar .user-buttons {
+	margin-left: auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.main .post-container .post .top-bar .user-buttons .button {
 	margin-left: 5px;
 	font-size: 2em;
 	padding: 0 .5em 0 .5em;
 	background-color: var(--box-color);
 	color: var(--subtext-color);
 	border: 1px solid var(--border-color);
+	border-radius: 5px;
 	cursor: pointer;
 }
 
-.main .post-container .post .top-bar #delete:hover {
+.main .post-container .post .top-bar .user-buttons .button:hover {
     color: var(--dark-text-color);
 	background-color: var(--color-scheme);
 	-moz-transition: .15s ease;
 }
 
-.main .post-container .post .top-bar #delete:active{
+.main .post-container .post .top-bar .user-buttons .button:active{
 	background-color: var(--active-color);
 }
 
 .main .post-container .post .post-content {
 	padding: 10px;
+}
+
+.main .post-container .post .post-info {
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+	padding: 0 0 .25em 1em;
+}
+
+.main .post-container .post .post-info > * {
+	margin: 0 1em 0 0;
+}
+
+.main .post-container .post .post-info ul {
+	display:flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.main .post-container .post .post-info ul a {
+		margin: 0 1em 0 0;
+}
+
+.main .post-container .post .post-info ul a:hover {
+}
+
+.main .post-container .post .post-info #time-posted {
+	color: var(--subtext-color);
+	margin-left: auto;
 }
 
 .main .post-container .post .post-footer {
