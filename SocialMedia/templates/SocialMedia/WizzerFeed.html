@@ -4,7 +4,10 @@
 
 {% block body %}
     {% include 'SocialMedia/components/navbar.html' %}
-
+    <script type="text/javascript">
+        $("document").ready(function() {
+        });
+    </script>
     <div class="main">
         <div class="post-form">
             <form method="POST" action="{% url 'index' %}">

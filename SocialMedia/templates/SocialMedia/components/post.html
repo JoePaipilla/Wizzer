@@ -1,5 +1,5 @@
 {% load static %}
-<div class="post">
+<div class="post" id="{{ whiz.id }}">
     <div class="top-bar">
         <a href="{% url 'profile-page' whiz.whiz_poster.user.get_username %}"><img id="profile-photo" src="{{ whiz.whiz_poster.profile_picture.url }}"/></a>
         <div class="name">
@@ -39,9 +39,9 @@
         <p id="time-posted">{{ whiz.time_posted }}</p>
     </div>
     <div class="post-footer">
-            <button id="delete" type="submit" value="{{ whiz.id }}" name="reply" form="post-form">Write Reply</button>
-            <button id="delete" type="submit" value="{{ whiz.id }}" name="like" form="post-form">Like</button>
-            <button id="delete" type="submit" value="{{ whiz.id }}" name="dislike" form="post-form">Dislike</button>
-            <button id="delete" type="submit" value="{{ whiz.id }}" name="report" form="post-form">Report</button>
+            <button id="reply" type="button" value="{{ whiz.id }}" name="reply">Write Reply</button>
+            <button id="like" type="submit" value="{{ whiz.id }}" name="like" form="post-form">Like</button>
+            <button id="dislike" type="submit" value="{{ whiz.id }}" name="dislike" form="post-form">Dislike</button>
+            <button id="report" type="submit" value="{{ whiz.id }}" name="report" form="post-form">Report</button>
     </div>
 </div>

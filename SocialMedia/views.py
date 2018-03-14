@@ -17,11 +17,27 @@ def default(name):
     return HttpResponse('<h1>This is the {} view.</h1>'.format(name))
 
 
-def index(request):
-    user = request.user
-    if request.method == "POST":
-        print(request.POST)
-        form = WhizForm(request.POST)
+class HomepageView(View):
+    form_class = WhizForm
+    template_name = 'SocialMedia/WizzerFeed.html'
+
+    def get(self, request):
+        user = request.user
+        form = self.form_class(None)
+        whizzes = Whiz.objects.all()[::-1]
+        context = {'WizzerUser': user,
+                   'Whizzes': whizzes,
+                   'WhizForm': form
+                   }
+
+        if user.id is None:
+            return redirect('login')
+        else:
+            return render(request, self.template_name, context)
+
+    def post(self, request):
+        user = request.user
+        form = self.form_class(request.POST)
         if form.is_valid():
             # change the bottom 'whiz_poster' to the request.user object
             new_whiz = Whiz(whiz_poster=user.wizzeruser, content=request.POST['whiz_input'])
@@ -33,6 +49,7 @@ def index(request):
         elif 'like' in request.POST:
             whiz = Whiz.objects.get(id=request.POST['like'])
             liked_user = UserObject.objects.get(username__exact=user).wizzeruser
+
             if liked_user not in whiz.likes.all():
                 whiz.likes.add(liked_user)
             else:
@@ -44,8 +61,6 @@ def index(request):
                 whiz.dislikes.add(disliked_user)
             else:
                 whiz.dislikes.remove(disliked_user)
-        elif 'report' in request.POST:
-            pass
         elif 'follow' in request.POST:
             self_user = UserObject.objects.get(username__exact=user).wizzeruser
             followed_user = UserObject.objects.get(username__exact=request.POST['follow']).wizzeruser
@@ -54,22 +69,29 @@ def index(request):
                 self_user.following.remove(followed_user)
             else:
                 followed_user.followers.add(self_user)
-                followed_user.save()
                 self_user.following.add(followed_user)
-                self_user.save()
         return redirect('index')
-    else:
-        form = WhizForm()
 
-    if str(user) == 'AnonymousUser':
-        return redirect('login')
-    else:
-        whizzes = Whiz.objects.all()[::-1]
-        context = {'WizzerUser': user,
-                   'Whizzes': whizzes,
-                   'WhizForm': form
-                   }
-        return render(request, 'SocialMedia/WizzerFeed.html', context)
+
+def logout_view(request):
+    logout(request)
+    return redirect('login')
+
+
+def profile_page(request, username):
+    user = request.user
+    whiz_form = WhizForm(None)
+    reply_form = ReplyForm(None)
+    profile_user = get_object_or_404(UserObject.objects, username__exact=username)
+    profile_user_whizzes = UserObject.objects.get(username__exact=username).wizzeruser.whiz_set.all()[::-1]
+    context = {
+        'ProfileUser': profile_user,
+        'ProfileUserWhizzes': profile_user_whizzes,
+        'MainUser': user,
+        'WhizForm': whiz_form,
+        'ReplyForm': reply_form
+    }
+    return render(request, 'SocialMedia/profile_page.html', context)
 
 
 class LoginView(View):
@@ -94,11 +116,6 @@ class LoginView(View):
             return redirect('index')
         else:
             return redirect('login')
-
-
-def logout_view(request):
-    logout(request)
-    return redirect('login')
 
 
 class RegistrationView(View):
@@ -132,57 +149,31 @@ class RegistrationView(View):
         return render(request, self.template_name, {'form': form})
 
 
-def follows(request):
-    return default(follows.__name__)
+class FollowsView(View):
+
+    def get(self, request, *args, **kwargs):
+        return default(self.__class__.__name__)
 
 
-def profile_page(request, username):
-    user = request.user
-    whiz_form = WhizForm(None)
-    reply_form = ReplyForm(None)
-    profile_user = get_object_or_404(UserObject.objects, username__exact=username)
-    profile_user_whizzes = UserObject.objects.get(username__exact=username).wizzeruser.whiz_set.all()[::-1]
-    context = {
-        'ProfileUser': profile_user,
-        'ProfileUserWhizzes': profile_user_whizzes,
-        'MainUser': user,
-        'WhizForm': whiz_form,
-        'ReplyForm': reply_form
-    }
-    return render(request, 'SocialMedia/profile_page.html', context)
+class NotificationsView(View):
+
+    def get(self, request, *args, **kwargs):
+        return default(self.__class__.__name__)
 
 
-def notifications(request):
-    return default(notifications.__name__)
+class DirectMessagesView(View):
+
+    def get(self, request, *args, **kwargs):
+        return default(self.__class__.__name__)
 
 
-def direct_messages(request):
-    return default(direct_messages.__name__)
+class GalleryView(View):
+
+    def get(self, request, *args, **kwargs):
+        return default(self.__class__.__name__)
 
 
-def gallery(request):
-    return default(gallery.__name__)
+class SettingsView(View):
 
-
-def settings(request):
-    return default(settings.__name__)
-
-
-def testing(request):
-    return render(request, 'SocialMedia/test.html', {'User': request.user})
-
-
-"""def register(request):
-    if request.method == 'POST':
-        form = UserCreationForm(request.POST)
-        if form.is_valid():
-            username = form.cleaned_data['username']
-            password = form.cleaned_data['password1']
-            form.save()
-            user = authenticate(username=username, password=password)
-            login(request, user)
-            return redirect('index')
-    else:
-        form = UserCreationForm()
-    context = {'form': form}
-    return render(request, 'SocialMedia/register.html', context)"""
+    def get(self, request, *args, **kwargs):
+        return default(self.__class__.__name__)

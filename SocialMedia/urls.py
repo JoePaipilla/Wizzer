@@ -6,17 +6,16 @@ from django.conf.urls.static import static
 from . import views
 
 urlpatterns = [
-    path('', views.index, name='index'),
+    path('', views.HomepageView.as_view(), name='index'),
     path('login/', views.LoginView.as_view(), name='login'),
     path('logout/', views.logout_view, name='logout'),
     path('register/', views.RegistrationView.as_view(), name='register'),
-    path('follows/', views.follows, name='follows'),
+    path('follows/', views.FollowsView.as_view(), name='follows'),
     path('profile/<username>/', views.profile_page, name='profile-page'),
-    path('notifications/', views.notifications, name='notifications'),
-    path('directmessages/', views.direct_messages, name='directmessages'),
-    path('gallery/', views.gallery, name='gallery'),
-    path('settings/', views.settings, name='settings'),
-    path('testing/', views.testing, name='testing')
+    path('notifications/', views.NotificationsView.as_view(), name='notifications'),
+    path('directmessages/', views.DirectMessagesView.as_view(), name='directmessages'),
+    path('gallery/', views.GalleryView.as_view(), name='gallery'),
+    path('settings/', views.SettingsView.as_view(), name='settings')
 ]
 
 if settings.DEBUG:
