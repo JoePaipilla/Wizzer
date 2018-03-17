@@ -15,7 +15,6 @@ def create_user_profile(sender, instance, created, **kwargs):
 def save_user_profile(sender, instance, **kwargs):
     instance.profile.save()"""
 
-
 def profile_picture_path(instance, filename):
     return '{}/profile-picture/{}'.format(instance.user.username, filename)
 

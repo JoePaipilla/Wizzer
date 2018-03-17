@@ -23,5 +23,5 @@ from SocialMedia import views as SocialMediaViews
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('SocialMedia.urls')),
-    path('API/', include('API.urls')),
+    path('API/', include('SocialMedia.API.urls'))
 ]
