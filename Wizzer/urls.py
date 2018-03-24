@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, include, re_path
 
 from rest_framework.urlpatterns import format_suffix_patterns
 
@@ -23,5 +23,5 @@ from SocialMedia import views as SocialMediaViews
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('SocialMedia.urls')),
-    path('API/', include('SocialMedia.API.urls'))
+    re_path('^((?i)API)/', include('SocialMedia.API.urls'))
 ]

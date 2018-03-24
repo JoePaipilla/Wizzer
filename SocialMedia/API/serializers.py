@@ -4,26 +4,27 @@ from SocialMedia.models import WizzerUser, Whiz
 from rest_framework import serializers
 
 
-class UserSerializer(serializers.ModelSerializer):
+class WhizSerializer(serializers.Serializer):
 
-    class Meta:
-        model = User
-        fields = [
-            'id',
-            'username',
-            'first_name',
-            'last_name',
-        ]
+    whiz_poster = serializers.StringRelatedField()
+    content = serializers.CharField()
+    time_posted = serializers.DateTimeField()
+    likes = serializers.StringRelatedField(many=True)
+    dislikes = serializers.StringRelatedField(many=True)
 
 
-class WhizSerializer(serializers.ModelSerializer):
+class ProfileSerializer(serializers.Serializer):
 
-    class Meta:
-        model = Whiz
-        fields = [
-            'whiz_poster',
-            'content',
-            'time_posted',
-            'likes',
-            'dislikes'
-        ]
+    following = serializers.StringRelatedField(many=True)
+    followers = serializers.StringRelatedField(many=True)
+    gender = serializers.ChoiceField(choices='GENDER_CHOICES')
+    whizzes = WhizSerializer(source='whiz_set', many=True)
+
+
+class UserSerializer(serializers.Serializer):
+
+    id = serializers.IntegerField(read_only=True)
+    username = serializers.CharField()
+    first_name = serializers.CharField()
+    last_name = serializers.CharField()
+    profile = ProfileSerializer(source='wizzeruser')
